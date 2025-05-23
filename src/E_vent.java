@@ -1,0 +1,42 @@
+import java.io.IOException;
+import java.nio.file.*;
+import java.util.Scanner;
+
+public class E_vent {
+    private static final Path FILE_PATH = Paths.get("eventuario.txt");
+    private static final Scanner leitor = new Scanner(System.in);
+    public static void main(String[] args){
+        int escolha = 3;
+        do{
+            String titulo = """
+            ╔═╗  ┬  ┬┌─┐┌┐┌┌┬┐
+            ║╣───└┐┌┘├┤ │││ │ 
+            ╚═╝   └┘ └─┘┘└┘ ┴
+                    """;
+
+            System.out.print(titulo + "-------------------\n");
+
+            System.out.printf("%-3s %-20s\n%-3s %-20s\n%-3s %-20s\n%-3s %-20s\n%-3s %-20s\n%-3s %-20s\n", "1.", "Add entry", "2.", "Entry history", "3.", "Search by date", "4.", "Search by title", "5.", "Delete entry", "6.", "Exit program");
+            System.out.print("-------------------\n");
+            System.out.printf("Insert option: ");
+            escolha = Integer.parseInt(leitor.nextLine());
+            
+            switch (escolha) {
+                case 1:                    
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;           
+                default:
+                    break;
+            }
+        }while(escolha != 3);
+    }
+}

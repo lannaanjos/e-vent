@@ -35,8 +35,43 @@ public class E_vent {
                 case 6:
                     break;           
                 default:
+                    
                     break;
             }
-        }while(escolha != 3);
+        }while(escolha != 6);
+    }
+
+    public static void addEntry(){
+        clearTerminal();
+    }
+
+    public static void entryHistory(){
+
+    }
+
+    public static void searchDate(){
+
+    }
+
+    public static void searchTitle(){
+
+    }
+
+    public static void deleteEntry(){
+
+    }
+
+    public static void clearTerminal(){
+        String os = System.getProperty("os.name");
+
+        try{
+            if(os.startsWith("Windows")){
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();           //  Clear Windows terminal
+            } else {
+                new ProcessBuilder("clear").inheritIO().start().waitFor();                      //  Clear Linux / Mac terminal          
+            }
+        } catch (Exception e){
+            System.out.println("Error(s) cleaning the terminal: " + e.getMessage());
+        }
     }
 }
